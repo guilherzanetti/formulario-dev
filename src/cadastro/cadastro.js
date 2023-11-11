@@ -19,16 +19,15 @@ function selectLabel(label) {
 botaox.addEventListener("click", (e) =>{
     e.preventDefault();
 
-//cria uma variavel para colocar o nome inserido
-    var adName = nome.value();
+//cria uma variavel para pegar o valor "nome" inserido
+    var valName = nome.value();
 // Cria um array vazio
     var arrayNames = [];
 // Adiciona o valor ao array
-    arrayNames.push(adName);
+    arrayNames.push(valName);
 
 // Cria e salva o array no local storage
-    localStorage.setItem("arrayNomes", JSON.stringify(arrayNomes));
-
+    localStorage.setItem("arrayNames", JSON.stringify(arrayNames));
 });
 
 
