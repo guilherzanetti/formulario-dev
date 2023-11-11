@@ -15,9 +15,19 @@ function selectLabel(label) {
     label.classList.add('selected-label');
 }
 
-//adicionando um listenning ao formInfo
-botaox.addEventListener("click", () =>{
+//adicionando um listenning ao botão
+botaox.addEventListener("click", (e) =>{
+    e.preventDefault();
 
+//cria uma variavel para colocar o nome inserido
+    var adName = nome.value();
+// Cria um array vazio
+    var arrayNames = [];
+// Adiciona o valor ao array
+    arrayNames.push(adName);
+
+// Cria e salva o array no local storage
+    localStorage.setItem("arrayNomes", JSON.stringify(arrayNomes));
 
 });
 
