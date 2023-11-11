@@ -1,0 +1,81 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(54,217,255,1) 100%);
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+.box-content{
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    margin: auto;
+    text-align: center;
+    margin: 3%;
+    padding: 15px;
+    border-radius: 20px;
+    width: 60%;
+}
+
+/* FORM INPUTS DE TEXTO */
+
+.form-info{
+    justify-content: center;
+    justify-items: center;
+    padding: 10px;
+}
+
+.inputtext{
+    width: 60%;
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #bfbfbf;
+}
+
+/* FORM PERGUNTAS */
+
+/* Estilo para esconder os inputs de rádio */
+input[type="radio"] {
+    display: none;
+}
+
+/* Estilo para labels selecionadas */
+.selected-label {
+    transition: 500ms;
+    background-color: rgb(78, 143, 255);
+    color: white;
+}
+
+.selected-label:hover {
+    background-color: rgb(78, 143, 255);
+}
+
+/* Estilo para as labels */
+label {
+    border-radius: 5px;
+    margin: 5px;
+    display: block;
+    padding: 10px;
+    border: 1px solid #bfbfbf;
+    cursor: pointer;
+}
+
+label:hover{
+    transition: 500ms;
+    background-color: rgba(223, 223, 223, 0.955)
+}
+
+
+
+
+

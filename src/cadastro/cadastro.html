@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Dev</title>
+    <link rel="stylesheet" href="./cadastro.css">
+    <link rel="stylesheet" href="/styleglobal.css">
+</head>
+<body>
+    <div class="box-content">
+        <h1>Cadastro de Dev</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae voluptatum, accusantium veritatis nisi veniam ipsum a vero dignissimos nulla voluptate architecto aperiam aspernatur voluptatem possimus et fuga reiciendis quidem rerum?</p>
+
+        <div class="form-info">
+            <input id="nome" class="inputtext" type="text" placeholder="Coloque seu nome">
+            <input id="idade" class="inputtext" type="text" placeholder="Coloque sua idade">
+        </div>
+        
+        <form>
+            <div class="perguntas perg1">
+            <h2>O que você faz quando vai programar?</h2>
+            <label for="q1_option1" onclick="selectLabel(this)">
+                Copio tudo da internet pois não consigo fazer nada sozinho.
+                <input type="radio" name="q1" id="q1_option1" value="Opção 1">
+            </label>
+            <label for="q1_option2" onclick="selectLabel(this)">
+                Tento fazer alguma coisa mas de vez em quando me perco e pesquiso na internet
+                <input type="radio" name="q1" id="q1_option2" value="Opção 2">
+            </label>
+            <label for="q1_option3" onclick="selectLabel(this)">
+                Que pesquisar o que? Eu faço tudo na mão!
+                <input type="radio" name="q1" id="q1_option3" value="Opção 3">
+            </label>
+        </div>
+        </form>
+    </div>
+    <script src="./cadastro.js"></script>
+</body>
+</html>

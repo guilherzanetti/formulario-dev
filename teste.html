@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Respostas em Colunas</title>
+  <style>
+    /* Estilo para as colunas de resposta */
+    .column {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      cursor: pointer;
+    }
+
+    /* Estilo para a coluna selecionada */
+    .selected {
+      background-color: blue;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1>Respostas em Colunas</h1>
+
+  <div class="column" onclick="selectColumn(this)">Copio tudo da internet pois não consigo fazer nada sozinho</div>
+  <div class="column" onclick="selectColumn(this)">Tento fazer alguma coisa mas de vez enquando me perco e pesquiso na internet</div>
+  <div class="column" onclick="selectColumn(this)">Que pesquisar o que? Eu faço tudo na mão!</div>
+
+  <script>
+    function selectColumn(element) {
+      // Remova a classe 'selected' de todas as colunas
+      const columns = document.querySelectorAll('.column');
+      columns.forEach((col) => {
+        col.classList.remove('selected');
+      });
+
+      // Adicione a classe 'selected' à coluna clicada
+      element.classList.add('selected');
+    }
+  </script>
+</body>
+</html>
