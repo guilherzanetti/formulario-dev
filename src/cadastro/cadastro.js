@@ -1,4 +1,7 @@
 //Variáveis
+const formInfo = document.getElementById("form-info")
+const nome = document.getElementById("nome")
+
 
 //fazer com que o radio selecionado mude a cor da label
 function selectLabel(label) {
@@ -11,6 +14,12 @@ function selectLabel(label) {
     // Adiciona a classe 'selected-label' à label clicada
     label.classList.add('selected-label');
 }
+
+//adicionando um listenning ao formInfo
+botaox.addEventListener("click", () =>{
+
+
+});
 
 
 
