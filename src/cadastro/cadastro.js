@@ -1,18 +1,23 @@
+
 //Variáveis
 const nome = document.getElementById("nome")
 
+// Variáveis
+const perguntas = document.querySelectorAll('.perguntas');
 
-//fazer com que o radio selecionado mude a cor da label
-function selectLabel(label) {
-    // Remove a classe 'selected-label' de todas as labels
-    const labels = document.querySelectorAll('label');
+
+// Fazer com que o radio selecionado mude a cor da label
+function selectLabel(label, perguntaIndex) {
+    // Remove a classe 'selected-label' da sessão de perguntas atual
+    const labels = perguntas[perguntaIndex].querySelectorAll('label');
     labels.forEach((l) => {
         l.classList.remove('selected-label');
     });
 
     // Adiciona a classe 'selected-label' à label clicada
     label.classList.add('selected-label');
-}
+};
+
 
 //adicionando um listenning ao botão
 botaox.addEventListener("click", (e) =>{
