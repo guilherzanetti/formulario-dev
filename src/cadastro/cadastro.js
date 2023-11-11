@@ -1,5 +1,4 @@
 //Variáveis
-const formInfo = document.getElementById("form-info")
 const nome = document.getElementById("nome")
 
 
@@ -28,6 +27,10 @@ botaox.addEventListener("click", (e) =>{
 
 // Cria e salva o array no local storage
     localStorage.setItem("arrayNames", JSON.stringify(arrayNames));
+
+// ja aproveita o evento e leva o usuario para pagina de destino
+
+window.location.href = "";
 });
 
 
