@@ -1,6 +1,7 @@
-
 //Variáveis
-const nome = document.getElementById("nome")
+const nome = document.getElementById("nome");
+const btnCadastrar = document.getElementById("btnCadastrar");
+
 
 // Variáveis
 const perguntas = document.querySelectorAll('.perguntas');
@@ -20,7 +21,7 @@ function selectLabel(label, perguntaIndex) {
 
 
 //adicionando um listenning ao botão
-botaox.addEventListener("click", (e) =>{
+btnCadastrar.addEventListener("click", (e) =>{
     e.preventDefault();
 
 //cria uma variavel para pegar o valor "nome" inserido
