@@ -3,22 +3,25 @@ import { arrayNames } from "./cadastro.js";
 
 
 
+// const newName = nameInput.value;
+//     const option = document.createElement('option');
+//     option.value = newName;
+//     dataSearch.appendChild(option);
 
 
+// //ao clicar no btn "buscar" ele dispara um evendo que pega o valor
 
-//ao clicar no btn "buscar" ele dispara um evendo que pega o valor
+// btnDiscovery.addEventListener("click", (e) =>{
 
-btnDiscovery.addEventListener("click", (e) =>{
-
-    var storedNames = localStorage.getItem("arrayNames") ? JSON.parse(localStorage.getItem("names")) : [];
+//     var storedNames = localStorage.getItem("arrayNames") ? JSON.parse(localStorage.getItem("names")) : [];
    
-    for (let i = 0; i < storedNames.length; i++) {
+//     for (let i = 0; i < storedNames.length; i++) {
        
-       if (storedNames[i] === valorDataSearch) {
-           window.location.href = storedNames[i]
-           break;
-       }
+//        if (storedNames[i] === valorDataSearch) {
+//            window.location.href = storedNames[i]
+//            break;
+//        }
        
-    }
+//     }
     
-   });
+//    });

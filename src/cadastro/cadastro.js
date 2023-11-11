@@ -17,27 +17,22 @@ function selectLabel(label, perguntaIndex) {
 
     // Adiciona a classe 'selected-label' à label clicada
     label.classList.add('selected-label');
+
+
 };
 
 
+
+
 //adicionando um listenning ao botão
-btnCadastrar.addEventListener("click", (e) =>{
-    e.preventDefault();
+const arrayNames = [];
 
-//cria uma variavel para pegar o valor "nome" inserido
-    var valName = nome.value();
-// Cria um array vazio
-    var arrayNames = [];
-// Adiciona o valor ao array
-    arrayNames.push(valName);
+btnCadastrar.addEventListener("click", (e) => {
+  e.preventDefault();
 
-// Cria e salva o array no local storage
-    localStorage.setItem("arrayNames", JSON.stringify(arrayNames));
+  const valNames = nome.value;
 
-// ja aproveita o evento e leva o usuario para pagina de destino
+  arrayNames.push(valNames);
 
-window.location.href = "";
+  localStorage.setItem("Names", JSON.stringify(arrayNames));
 });
-
-
-
