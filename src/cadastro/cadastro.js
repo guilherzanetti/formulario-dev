@@ -1,7 +1,7 @@
 //Variáveis
 const nome = document.getElementById("nome");
 const btnCadastrar = document.getElementById("btnCadastrar");
-
+const arrayNames = JSON.parse(localStorage.getItem("arrayNames")) || [];
 
 // Variáveis
 const perguntas = document.querySelectorAll('.perguntas');
@@ -25,7 +25,7 @@ function selectLabel(label, perguntaIndex) {
 
 
 //adicionando um listenning ao botão
-const arrayNames = [];
+
 
 btnCadastrar.addEventListener("click", (e) => {
   e.preventDefault();
@@ -34,5 +34,5 @@ btnCadastrar.addEventListener("click", (e) => {
 
   arrayNames.push(valNames);
 
-  localStorage.setItem("Names", JSON.stringify(arrayNames));
+  localStorage.setItem("arrayNames", JSON.stringify(arrayNames));
 });
