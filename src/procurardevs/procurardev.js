@@ -1,27 +1,22 @@
 import { arrayNames } from "./cadastro.js";
+const selectUser = document.getElementById ("selectUser")
 
+//func. de adicionar usuario as opções na pag.
+function adUser(user) {
 
-
-
-// const newName = nameInput.value;
-//     const option = document.createElement('option');
-//     option.value = newName;
-//     dataSearch.appendChild(option);
-
-
-// //ao clicar no btn "buscar" ele dispara um evendo que pega o valor
-
-// btnDiscovery.addEventListener("click", (e) =>{
-
-//     var storedNames = localStorage.getItem("arrayNames") ? JSON.parse(localStorage.getItem("names")) : [];
-   
-//     for (let i = 0; i < storedNames.length; i++) {
-       
-//        if (storedNames[i] === valorDataSearch) {
-//            window.location.href = storedNames[i]
-//            break;
-//        }
-       
-//     }
+    //faz criar um campo de option no documento
+    const option = document.createElement("option");
     
-//    });
+    //declara que o texto e o valor da opção serão virão do parametro user
+    option.text = user;
+    option.value = user;
+
+    //adiciona a opção ao campo do menu suspenso
+    select.add(option);
+    
+}
+
+//faz um loopin para verificar o indice no arrayNames do nome adicionado e chama a função de adicionar usuario
+for (var i = 0; i < arrayNames.length; i++) {
+    adicionarUsuario(arrayNames[i]);
+  }
