@@ -21,6 +21,10 @@ body{
     flex-direction: column;
     justify-items: center;
     justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
     padding: 20px;
     margin: 20%;
     background-color: rgb(255, 255, 255);
@@ -36,12 +40,45 @@ body{
     border-radius: 10px;
     border: none;
     cursor: pointer;
+    border: none;
+    cursor: pointer;
 }
 
 .btnIndex:hover{
     transition: 500ms;
     background-color: rgb(126, 65, 19);
 }
+
+.box-btn{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    
+}
+
+.cadastrar{
+    width: 100%;
+    margin-bottom: 10px;
+    
+}
+
+.selectUser{
+    padding: 10px;
+    border-radius: 5px;
+    
+}
+
+
+.procurarDevs{
+    width: 50%;
+    margin-left: 10px;
+}
+
+.contentBtns{
+    width: 60%;
+    margin: auto;
+}
+
 
 .boxBtn{
     display: flex;
