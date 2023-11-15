@@ -12,11 +12,11 @@ function selectLabel(label, perguntaIndex) {
     // Remove a classe 'selected-label' da sessão de perguntas atual
     const labels = perguntas[perguntaIndex].querySelectorAll('label');
     labels.forEach((l) => {
-        l.classList.remove('selected-label');
+        l.classList.remove('selectedLabel');
     });
 
     // Adiciona a classe 'selected-label' à label clicada
-    label.classList.add('selected-label');
+    label.classList.add('selectedLabel');
 
 
 };

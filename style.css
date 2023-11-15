@@ -16,7 +16,7 @@ body{
     background: radial-gradient(circle, rgb(70, 33, 2) 0%, rgb(22, 12, 0));
 }
 
-.content-box{
+.contentBox{
     display: flex;
     flex-direction: column;
     justify-items: center;
@@ -43,7 +43,7 @@ body{
     background-color: rgb(126, 65, 19);
 }
 
-.box-btn{
+.boxBtn{
     display: flex;
     align-items: center;
     justify-content:space-between;
