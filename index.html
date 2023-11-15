@@ -15,23 +15,29 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor maxime perspiciatis alias possimus debitis
             veritatis consectetur, commodi totam. Iste corrupti iure quod incidunt exercitationem officiis obcaecati
             laudantium sapiente libero quasi.</p>
-            
+
 
         <br>
         <div class="contentBtns">
-            
-            <button type="button" class="btnIndex cadastrar" onclick="">Cadastrar</button>
+
+            <button type="button" class="btnIndex cadastrar" onclick="irParaCadastro()">Cadastrar</button>
             <div class="boxBtn">
                 <div class="contentProcurar">
                     <select id="selectUser" class="selectUser" name="selectLabel">
                         <option value="" disabled selected>Selecione um usuário</option>
                     </select>
                 </div>
-              
+
                 <a href="src/" class="btnIndex procurarDevs">Procurar Devs</a>
             </div>
         </div>
     </div>
+    <script>
+        function irParaCadastro() {
+            // Substitua 'outraPagina.html' pela URL da página para a qual você deseja redirecionar
+            window.location.href = '/src/cadastro/cadastro.html';
+        }
+    </script>
     <script src="procurardev.js"></script>
 </body>
 
