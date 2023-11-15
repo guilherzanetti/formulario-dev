@@ -21,10 +21,6 @@ body{
     flex-direction: column;
     justify-items: center;
     justify-content: center;
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    justify-content: center;
     padding: 20px;
     margin: 20%;
     background-color: rgb(255, 255, 255);
@@ -105,7 +101,7 @@ body{
     margin-left: 10px;
 }
 
-.contentBtns{
+.contentBtns {
     width: 60%;
     margin: auto;
 }

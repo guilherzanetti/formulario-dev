@@ -13,15 +13,17 @@ const perguntas = document.querySelectorAll('.perguntas');
 
 // Fazer com que o radio selecionado mude a cor da label
 function selectLabel(label, perguntaIndex) {
-  const perguntas = document.querySelectorAll('.perguntas');
-  const labels = perguntas[perguntaIndex].querySelectorAll('label');
-  
-  labels.forEach((l) => {
-      l.classList.remove('selectedLabel');
-  });
+    // Remove a classe 'selected-label' da sessão de perguntas atual
+    const labels = perguntas[perguntaIndex].querySelectorAll('label');
+    labels.forEach((l) => {
+        l.classList.remove('selectedLabel');
+    });
 
-  label.classList.add('selectedLabel');
-}
+    // Adiciona a classe 'selected-label' à label clicada
+    label.classList.add('selectedLabel');
+
+
+};
 
 
 
