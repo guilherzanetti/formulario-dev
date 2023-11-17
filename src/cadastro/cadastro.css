@@ -93,7 +93,7 @@ body{
     justify-items: center;
 }
 
-.box-content{
+.boxContent{
     background-color: rgb(255, 255, 255);
     justify-content: center;
     justify-items: center;
@@ -108,7 +108,7 @@ body{
 
 /* FORM INPUTS DE TEXTO */
 
-.form-info{
+.formInfo{
     justify-content: center;
     justify-items: center;
     padding: 10px;
@@ -131,13 +131,13 @@ input[type="radio"] {
 }
 
 /* Estilo para labels selecionadas */
-.selected-label {
+.selectedLabel {
     transition: 500ms;
     background-color: rgb(210, 91, 0);
     color: white;
 }
 
-.selected-label:hover {
+.selectedLabel:hover {
     background-color: rgb(212, 138, 81);
 }
 
@@ -160,7 +160,7 @@ label:hover{
     background-color: rgba(223, 223, 223, 0.955);
 }
 
-.btn-cadastrar{
+.btnCadastrar{
     width: 60%;
     padding: 10px;
     margin: 20px;
@@ -172,7 +172,7 @@ label:hover{
     cursor: pointer;
 }
 
-.btn-cadastrar:hover{
+.btnCadastrar:hover{
     transition: 500ms;
     background-color: rgb(210, 91, 0);
 }
