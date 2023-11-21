@@ -9,7 +9,7 @@ const description1 = document.getElementById("description1");
 const description2 = document.getElementById("description2");
 const description3 = document.getElementById("description3");
 
-//algoritmo
+//algoritmo.
 
 
 //seleção de img e texto
