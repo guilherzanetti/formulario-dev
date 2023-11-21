@@ -1,12 +1,4 @@
-//Variáveis
-const nome = document.getElementById("nome");
-const btnCadastrar = document.getElementById("btnCadastrar");
-const arrayNames = JSON.parse(localStorage.getItem("arrayNames")) || [];
-const resposta1 = document.getElementById("").value
-const resposta2 = document.getElementById("").value
-const resposta3 = document.getElementById("").value
-const resposta4 = document.getElementById("").value
-const resposta5 = document.getElementById("").value
+// frontend-frontend-frontend-frontend-frontend-frontend-frontend-frontend-frontend-frontend-frontend-
 // Variáveis
 const perguntas = document.querySelectorAll('.perguntas');
 
@@ -24,7 +16,14 @@ function selectLabel(label, perguntaIndex) {
 }
 
 
+// Backend-Backend-Backend-Backend-Backend-Backend-Backend-Backend-Backend-Backend-Backend-Backend-Backend-
 
+
+//                                                 Tratando nomes
+//Variáveis
+const nome = document.getElementById("nome");
+const btnCadastrar = document.getElementById("btnCadastrar");
+const arrayNames = JSON.parse(localStorage.getItem("arrayNames")) || [];
 
 //adicionando um listenning ao botão
 
@@ -32,9 +31,16 @@ function selectLabel(label, perguntaIndex) {
 btnCadastrar.addEventListener("click", (e) => {
   e.preventDefault();
 
-  const valNames = nome.value;
+  const valNames = nome.value.trim();
 
-  arrayNames.push(valNames);
-
-  localStorage.setItem("arrayNames", JSON.stringify(arrayNames));
+  valNames != ""
+    ? (
+        arrayNames.push(valNames),
+        localStorage.setItem("arrayNames", JSON.stringify(arrayNames)),
+        console.log("O Nome: "+ valNames + " foi adicionado com sucesso!")
+      )
+    : alert("Por favor, insira um nome válido.");
 });
+
+
+//                                                    tratando respostas

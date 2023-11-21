@@ -13,10 +13,10 @@ const description3 = document.getElementById("description3");
 
 
 //seleção de img e texto
-if (resultAlg = x) {
+if (resultAlg == x) {
     programerImage = image1;
     programerDescription = description1.innerText
-} else if (resultAlg = y) {
+} else if (resultAlg == y) {
     programerImage = image2;
     programerDescription = description2.innerText
 } else {
