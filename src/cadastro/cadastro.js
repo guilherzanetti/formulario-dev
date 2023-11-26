@@ -47,15 +47,26 @@ btnCadastrar.addEventListener("click", (e) => {
 
 // função para verificar respostas
 
-function selectedRadio() {
-  const questions = document.querySelectorAll('.perguntas');
+// function selectedRadio() {
+//   const questions = document.querySelectorAll('.perguntas');
 
   questions.forEach(function (question) {
     const inputClient = question.querySelectorAll('input[type="radio"]');
     const selectedInputClient = Array.from(inputClient).find(input => input.checked);
     
-    console.log(selectedInputClient ? selectedInputClient.value : null);
+    console.log(selectedInputClient ? selectedInputClient.value : null)
   });
 }
 
 document.getElementById("btnCadastrar").addEventListener('click', selectedRadio);
+//     questions.forEach(function name(questions) {
+
+//       const inputClient = questions.querySelectorAll ('input[type="radio"]');
+
+//       const selectedInputClient = Array.from(inputClient).find(inputClient => inputClient.checked);
+      
+//     console.log(selectedInputClient ? selectedInputClient.value : null);
+//   });
+// };
+// document.getElementById("btnCadastrar").addEventListener('click', selectedRadio);
+

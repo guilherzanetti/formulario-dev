@@ -23,3 +23,31 @@ if (resultAlg == x) {
     programerImage = image3;
     programerDescription = description3.innerText
 }
+
+// Características dos usúarios
+
+const caracterUser = [
+    {
+        caracteristica: "Preguiçoso",
+        descricao: "lorem",
+        img: "url"
+
+    },
+
+    {
+        caracteristica: "Monge",
+        descricao: "lorem",
+        img: "url"
+
+    },
+
+    {
+        caracteristica: "Louco",
+        descricao: "lorem",
+        img: "url"
+
+    }
+];
+
+//Teste
+console.log("teste", caracterUser[2].caracteristica);
