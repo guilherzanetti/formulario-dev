@@ -131,34 +131,34 @@
     <script src="./cadastro.js"></script>
     <script>
 
-        // Adicione esta função ao seu arquivo cadastro.js
-function obterRespostasConsole() {
-    const respostas = {
-        genero: obterRespostaPergunta('genero'),
-        q1: obterRespostaPergunta('q1'),
-        q2: obterRespostaPergunta('q2'),
-        q3: obterRespostaPergunta('q3'),
-        q4: obterRespostaPergunta('q4'),
-        q5: obterRespostaPergunta('q5'),
-        // Adicione mais perguntas conforme necessário
-    };
+                // Adicione esta função ao seu arquivo cadastro.js
+        function obterRespostasConsole() {
+            const respostas = {
+                genero: obterRespostaPergunta('genero'),
+                q1: obterRespostaPergunta('q1'),
+                q2: obterRespostaPergunta('q2'),
+                q3: obterRespostaPergunta('q3'),
+                q4: obterRespostaPergunta('q4'),
+                q5: obterRespostaPergunta('q5'),
+                // Adicione mais perguntas conforme necessário
+            };
 
-    console.log(respostas);
-}
+            console.log(respostas);
+        }
 
-// Altere o evento associado ao botão "Cadastrar" para chamar a nova função
-document.getElementById("btnCadastrar").addEventListener("click", obterRespostasConsole);
+        // Altere o evento associado ao botão "Cadastrar" para chamar a nova função
+        document.getElementById("btnCadastrar").addEventListener("click", obterRespostasConsole);
 
-// Mantenha a função obterRespostaPergunta no seu arquivo cadastro.js
-function obterRespostaPergunta(nomePergunta) {
-    const opcoes = document.querySelectorAll(`input[name="${nomePergunta}"]:checked`);
-    
-    if (opcoes.length > 0) {
-        return opcoes[0].value;
-    }
+        // Mantenha a função obterRespostaPergunta no seu arquivo cadastro.js
+        function obterRespostaPergunta(nomePergunta) {
+            const opcoes = document.querySelectorAll(`input[name="${nomePergunta}"]:checked`);
+            
+            if (opcoes.length > 0) {
+                return opcoes[0].value;
+            }
 
-    return null; // Retorna null se nenhuma opção estiver selecionada
-}
+            return null; // Retorna null se nenhuma opção estiver selecionada
+        }
 
 
     </script>
