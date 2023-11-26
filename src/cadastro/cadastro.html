@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="./cadastro.css">
     <link rel="stylesheet" href="/styleglobal.css">
 </head>
+
 <body>
     <div class="boxContent">
         <h1>Cadastro de Dev</h1>
@@ -17,100 +19,150 @@
                 <input id="nome" class="inputtext" type="text" placeholder="Coloque seu nome">
                 <input id="idade" class="inputtext" type="text" placeholder="Coloque sua idade">
 
-                <label>
-                    <input type="radio" name="genero" value="masculino">
-                    Masculino
-                </label>
-        
-                <label>
-                    <input type="radio" name="genero" value="feminino">
-                    Feminino
-                </label>
-            </div>
+                <!-- TEM QUE POR ESTILO PARA MOSTRAR QUE ESTA SELECIONADO E DIMINUIR OS BOTÕES====================================<<<<<<<<< -->
+                <div class="perguntas genero">
+                    <label for="genero-masculino" onclick="selectLabel(this, 0)">
+                        <input type="radio" name="genero" id="genero-masculino" value="masculino">
+                        Masculino
+                    </label>
+
+                    <label for="genero-feminino" onclick="selectLabel(this, 0)">
+                        <input type="radio" name="genero" id="genero-feminino" value="feminino">
+                        Feminino
+                    </label>
+                </div>
 
             <div class="perguntas perg1">
-            <h2>O que você faz quando vai programar?</h2>
-            <label for="q1_option1" onclick="selectLabel(this, 0)">
-                Copio tudo da internet pois não consigo fazer nada sozinho.
-                <input type="radio" name="q1" id="q1-option1" value="Opção 1">
-            </label>
-            <label for="q1_option2" onclick="selectLabel(this, 0)">
-                Tento fazer alguma coisa mas de vez em quando me perco e pesquiso na internet
-                <input type="radio" name="q1" id="q1-option2" value="Opção 2">
-            </label>
-            <label for="q1_option3" onclick="selectLabel(this, 0)">
-                Que pesquisar o que? Eu faço tudo na mão!
-                <input type="radio" name="q1" id="q1-option3" value="Opção 3">
-            </label>
-        </div>
-        </form>
 
-        <div class="perguntas perg2">
-            <h2>Você gosta de qual linguagem de programação?</h2>
-            <label for="q1_option1" onclick="selectLabel(this, 1)">
-                Eu curto Python pois é muito fácil ;)
-                <input type="radio" name="q2" id="q2-option1" value="Opção 1">
-            </label>
-            <label for="q1_option2" onclick="selectLabel(this, 1)">
-                Gosto de Javascript pois gosto de trabalhar com desenvolvimento web
-                <input type="radio" name="q2" id="q2-option2" value="Opção 2">
-            </label>
-            <label for="q1_option3" onclick="selectLabel(this, 1)">
-                Java, C, C#, ou C++ pois não tenho mais sanidade mental
-                <input type="radio" name="q2" id="q2-option3" value="Opção 3">
-            </label>
-        </div>
+                <h2>O que você faz quando vai programar?</h2>
+                <label for="q1-option1" onclick="selectLabel(this,1)">
+                    Copio tudo da internet pois não consigo fazer nada sozinho.
+                    <input type="radio" name="q1" id="q1-option1" value="Opção 1">
+                </label>
+                <label for="q1-option2" onclick="selectLabel(this, 1)">
+                    Tento fazer alguma coisa mas de vez em quando me perco e pesquiso na internet
+                    <input type="radio" name="q1" id="q1-option2" value="Opção 2">
+                </label>
+                <label for="q1-option3" onclick="selectLabel(this, 1)">
+                    Que pesquisar o que? Eu faço tudo na mão!
+                    <input type="radio" name="q1" id="q1-option3" value="Opção 3">
+                </label>
 
-        <div class="perguntas perg3">
-            <h2>Quantas vezes por semana você estuda programação?</h2>
-            <label for="q1_option1" onclick="selectLabel(this, 2)">
-                Eu curto Python pois é muito fácil ;)
-                <input type="radio" name="q3" id="q3-option1" value="Opção 1">
-            </label>
-            <label for="q1_option2" onclick="selectLabel(this, 2)">
-                Gosto de Javascript pois gosto de trabalhar com desenvolvimento web
-                <input type="radio" name="q3" id="q3-option2" value="Opção 2">
-            </label>
-            <label for="q1_option3" onclick="selectLabel(this, 2)">
-                Java, C, C#, ou C++ pois não tenho mais sanidade mental
-                <input type="radio" name="q3" id="q3-option3" value="Opção 3">
-            </label>
-        </div>
+            </div>
 
-        <div class="perguntas perg3">
-            <h2>Quantas vezes por semana você estuda programação?</h2>
-            <label for="q1_option1" onclick="selectLabel(this, 3)">
-                Eu curto Python pois é muito fácil ;)
-                <input type="radio" name="q4" id="q4-option1" value="Opção 1">
-            </label>
-            <label for="q1_option2" onclick="selectLabel(this, 3)">
-                Gosto de Javascript pois gosto de trabalhar com desenvolvimento web
-                <input type="radio" name="q4" id="q4-option2" value="Opção 2">
-            </label>
-            <label for="q1_option3" onclick="selectLabel(this, 3)">
-                Java, C, C#, ou C++ pois não tenho mais sanidade mental
-                <input type="radio" name="q4" id="q4-option3" value="Opção 3">
-            </label>
-        </div>
+            <div class="perguntas perg2">
 
-        <div class="perguntas perg3">
-            <h2>Quantas vezes por semana você estuda programação?</h2>
-            <label for="q1_option1" onclick="selectLabel(this, 4)">
-                Eu curto Python pois é muito fácil ;)
-                <input type="radio" name="q5" id="q5-option1" value="Opção 1">
-            </label>
-            <label for="q1_option2" onclick="selectLabel(this, 4)">
-                Gosto de Javascript pois gosto de trabalhar com desenvolvimento web
-                <input type="radio" name="q5" id="q5-option2" value="Opção 2">
-            </label>
-            <label for="q1_option3" onclick="selectLabel(this, 4)">
-                Java, C, C#, ou C++ pois não tenho mais sanidade mental
-                <input type="radio" name="q5" id="q5-option3" value="Opção 3">
-            </label>
-        </div>
-        <button type="button" id="btnCadastrar" class="btn-cadastrar">Cadastrar</button>
+                <h2>Você gosta de qual linguagem de programação?</h2>
+                <label for="q2-option1" onclick="selectLabel(this, 2)">
+                    Eu curto Python pois é muito fácil ;)
+                    <input type="radio" name="q2" id="q2-option1" value="Opção 1">
+                </label>
+                <label for="q2-option2" onclick="selectLabel(this, 2)">
+                    Gosto de Javascript pois gosto de trabalhar com desenvolvimento web
+                    <input type="radio" name="q2" id="q2-option2" value="Opção 2">
+                </label>
+                <label for="q2-option3" onclick="selectLabel(this, 2)">
+                    Java, C, C#, ou C++ pois não tenho mais sanidade mental
+                    <input type="radio" name="q2" id="q2-option3" value="Opção 3">
+                </label>
+
+            </div>
+
+            <div class="perguntas perg3">
+
+                <h2>Como você trabalha, ou pretende trabalhar?</h2>
+                <label for="q3_option1" onclick="selectLabel(this, 3)">
+                    Sou (Não vejo a hora de ser) suporte e ajudo no possivel. (Presencial)
+                    <input type="radio" name="q3" id="q3_option1" value="Opção 1">
+                </label>
+                <label for="q3_option2" onclick="selectLabel(this, 3)">
+                    Preciso trocar informações e pedir ajuda (Hibrido)
+                    <input type="radio" name="q3" id="q3_option2" value="Opção 2">
+                </label>
+                <label for="q3_option3" onclick="selectLabel(this, 3)">
+                    Não quero ver pessoas, apenas linhas de codigo. (Home Office)
+                    <input type="radio" name="q3" id="q3_option3" value="Opção 3">
+                </label>
+
+            </div>
+
+            <div class="perguntas perg4">
+
+                <h2>Quantas vezes por semana você estuda programação?</h2>
+                <label for="q4_option1" onclick="selectLabel(this, 4)">
+                    Estudo apenas quando sobra tempo ou durante as aulas.
+                    <input type="radio" name="q4" id="q4_option1" value="Opção 1">
+                </label>
+                <label for="q4_option2" onclick="selectLabel(this, 4)">
+                    Reservo 2 ou 3 dias da semana para estudar de verdade!
+                    <input type="radio" name="q4" id="q4_option2" value="Opção 2">
+                </label>
+                <label for="q4_option3" onclick="selectLabel(this, 4)">
+                    Estou sempre estudando, seja ativamente, em sala de aula ou assistindo videos sobre.
+                    <input type="radio" name="q4" id="q4_option3" value="Opção 3">
+                </label>
+
+            </div>
+
+            <div class="perguntas perg5">
+
+                <h2>Como você vê o futuro da programação</h2>
+                <label for="q5_option1" onclick="selectLabel(this, 5)">
+                    As máquinas dominarão tudo!
+                    <input type="radio" name="q5" id="q5_option1" value="Opção 1">
+                </label>
+                <label for="q5_option2" onclick="selectLabel(this, 5)">
+                    Utilizarei a tecnologia ao meu favor.
+                    <input type="radio" name="q5" id="q5_option2" value="Opção 2">
+                </label>
+                <label for="q5_option3" onclick="selectLabel(this, 5)">
+                    A tecnologia me utilizará a favor dela.
+                    <input type="radio" name="q5" id="q5_option3" value="Opção 3">
+                </label>
+
+            </div>
+
+            <!-- Adicione outras perguntas conforme necessário -->
+
+            <button type="button" id="btnCadastrar" class="btnCadastrar">Cadastrar</button>
         </form>
     </div>
     <script src="./cadastro.js"></script>
+    <script>
+
+                // Adicione esta função ao seu arquivo cadastro.js
+        function obterRespostasConsole() {
+            const nome = document.querySelector('#nome').value;
+            const respostas = {
+                nome: nome,
+                genero: obterRespostaPergunta('genero'),
+                q1: obterRespostaPergunta('q1'),
+                q2: obterRespostaPergunta('q2'),
+                q3: obterRespostaPergunta('q3'),
+                q4: obterRespostaPergunta('q4'),
+                q5: obterRespostaPergunta('q5'),
+                // Adicione mais perguntas conforme necessário
+            };
+
+            console.log(respostas);
+        }
+
+        // Altere o evento associado ao botão "Cadastrar" para chamar a nova função
+        document.getElementById("btnCadastrar").addEventListener("click", obterRespostasConsole);
+
+        // Mantenha a função obterRespostaPergunta no seu arquivo cadastro.js
+        function obterRespostaPergunta(nomePergunta) {
+            const opcoes = document.querySelectorAll(`input[name="${nomePergunta}"]:checked`);
+            
+            if (opcoes.length > 0) {
+                return opcoes[0].value;
+            }
+
+            return null; // Retorna null se nenhuma opção estiver selecionada
+        }
+
+
+    </script>
 </body>
+
 </html>

@@ -9,17 +9,45 @@ const description1 = document.getElementById("description1");
 const description2 = document.getElementById("description2");
 const description3 = document.getElementById("description3");
 
-//algoritmo
+//algoritmo.
 
 
 //seleção de img e texto
-if (resultAlg = x) {
+if (resultAlg == x) {
     programerImage = image1;
     programerDescription = description1.innerText
-} else if (resultAlg = y) {
+} else if (resultAlg == y) {
     programerImage = image2;
     programerDescription = description2.innerText
 } else {
     programerImage = image3;
     programerDescription = description3.innerText
 }
+
+// Características dos usúarios
+
+const caracterUser = [
+    {
+        caracteristica: "Preguiçoso",
+        descricao: "lorem",
+        img: "url"
+
+    },
+
+    {
+        caracteristica: "Monge",
+        descricao: "lorem",
+        img: "url"
+
+    },
+
+    {
+        caracteristica: "Louco",
+        descricao: "lorem",
+        img: "url"
+
+    }
+];
+
+//Teste
+console.log("teste", caracterUser[2].caracteristica);
