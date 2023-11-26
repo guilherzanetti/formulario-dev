@@ -50,13 +50,12 @@ btnCadastrar.addEventListener("click", (e) => {
 function selectedRadio() {
   const questions = document.querySelectorAll('.perguntas');
 
-    questions.forEach(function name(questions) {
-
-      const inputClient = questions.querySelectorAll ('input[type="radio"]');
-
-      const selectedInputClient = Array.from(inputClient).find(inputClient => inputClient.checked);
-      
+  questions.forEach(function (question) {
+    const inputClient = question.querySelectorAll('input[type="radio"]');
+    const selectedInputClient = Array.from(inputClient).find(input => input.checked);
+    
     console.log(selectedInputClient ? selectedInputClient.value : null);
   });
-};
+}
+
 document.getElementById("btnCadastrar").addEventListener('click', selectedRadio);
