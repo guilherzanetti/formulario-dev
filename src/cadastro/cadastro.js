@@ -42,22 +42,3 @@ btnCadastrar.addEventListener("click", (e) => {
     : alert("Por favor, insira um nome válido.");
 });
 
-
-//                                                    tratando respostas
-
-// função para verificar respostas
-
-// function selectedRadio() {
-//   const questions = document.querySelectorAll('.perguntas');
-
-//     questions.forEach(function name(questions) {
-
-//       const inputClient = questions.querySelectorAll ('input[type="radio"]');
-
-//       const selectedInputClient = Array.from(inputClient).find(inputClient => inputClient.checked);
-      
-//     console.log(selectedInputClient ? selectedInputClient.value : null);
-//   });
-// };
-// document.getElementById("btnCadastrar").addEventListener('click', selectedRadio);
-
