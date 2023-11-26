@@ -167,7 +167,11 @@
             // Verificar qual possui mais
 
             if (resposta1 > resposta2 && resposta1 > resposta3) {
-                window.location.href = '/src/result/programerType.html';
+                window.location.href = '/src/result/programerType1.html';
+            }else if(resposta2 > resposta1 && resposta3){
+                window.location.href = '/src/result/programerType2.html';
+            } else{
+                window.location.href = '/src/result/programerType3.html';
             }
 
             console.log(resposta1, resposta2, resposta3);
