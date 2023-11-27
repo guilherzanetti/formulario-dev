@@ -57,30 +57,18 @@ function obterRespostasConsole() {
   const opcoes = [q1resposta, q2resposta, q3resposta, q4resposta, q5resposta];
 
   for(i = 0; i < opcoes.length; i ++){ 
-    if (opcoes[i] == "Opção 1") {
-      resposta1 = resposta1 + 1;
-    } else if (q2resposta == "Opção 2") {
-      resposta2 = resposta2 + 1;
-    } else {
-      resposta3 = resposta3 + 1;
-    }
-  }
-
-  // Verificação da quantidade da mesma resposta
-
-  // Verificar tipo de dev
-
-
-  // const devImg = "";
-  // const devDesc = "";
-  // const devCaracter = "";
-
-  // Verificar qual possui mais
-
+        if (opcoes[i] == "Opção 1") {
+        resposta1 = resposta1 + 1;
+        } else if (q2resposta == "Opção 2") {
+        resposta2 = resposta2 + 1;
+        } else {
+        resposta3 = resposta3 + 1;
+        }
+    };
 
 
   if (resposta1 > resposta2 && resposta1 > resposta3) {
-    // window.location.href = '/src/result/programerType1.html';
+
     if (respostas.genero == "masculino") {
       devImg = caracterUserMasculino[0].img;
       devDesc = caracterUserMasculino[0].descricao;
@@ -92,7 +80,7 @@ function obterRespostasConsole() {
     }
 
   } else if (resposta2 > resposta1 && resposta2 > resposta3) {
-    // window.location.href = '/src/result/programerType2.html';
+    
     if (respostas.genero == "masculino") {
       devImg = caracterUserMasculino[1].img;
       devDesc = caracterUserMasculino[1].descricao;
@@ -103,7 +91,7 @@ function obterRespostasConsole() {
       devCaracter = caracterUserFeminino[1].caracteristica
     }
   } else {
-    // window.location.href = '/src/result/programerType3.html';
+
     if (respostas.genero == "masculino") {
       devImg = caracterUserMasculino[2].img;
       devDesc = caracterUserMasculino[2].descricao;
@@ -121,7 +109,7 @@ function obterRespostasConsole() {
   console.log("a resposta q1 é ", q1resposta)
 
 
-//adicionando um listenning ao botão
+    //adicionando um listenning ao botão
   btnCadastrar.addEventListener("click", (e) => {
     e.preventDefault();
   
@@ -138,7 +126,6 @@ function obterRespostasConsole() {
   });
 }
 
-}
 
 
 // Altere o evento associado ao botão "Cadastrar" para chamar a nova função
