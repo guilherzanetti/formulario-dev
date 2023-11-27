@@ -1,4 +1,4 @@
-// frontend-frontend-frontend-frontend-frontend-frontend-frontend-frontend-frontend-frontend-frontend-
+
 // Variáveis
 const perguntas = document.querySelectorAll('.perguntas');
 
@@ -26,7 +26,7 @@ let devImg, devDesc, devCaracter;
 
 
 // Adicione esta função ao seu arquivo cadastro.js
-export function obterRespostasConsole() {
+function obterRespostasConsole(pergunta) {
   const nome = document.querySelector('#nome').value;
   const respostas = {
     nome: nome,
@@ -67,15 +67,15 @@ export function obterRespostasConsole() {
 
   const opcoes = [q1resposta, q2resposta, q3resposta, q4resposta, q5resposta];
 
-  for(i = 0; i < opcoes.length; i ++){ 
-        if (opcoes[i] == "Opção 1") {
-        resposta1 = resposta1 + 1;
-        } else if (q2resposta == "Opção 2") {
-        resposta2 = resposta2 + 1;
-        } else {
-        resposta3 = resposta3 + 1;
-        }
+  for (i = 0; i < opcoes.length; i++) {
+    if (opcoes[i] == "Opção 1") {
+      resposta1 = resposta1 + 1;
+    } else if (q2resposta == "Opção 2") {
+      resposta2 = resposta2 + 1;
+    } else {
+      resposta3 = resposta3 + 1;
     }
+  };
 
 
   if (resposta1 > resposta2 && resposta1 > resposta3) {
@@ -91,7 +91,7 @@ export function obterRespostasConsole() {
     }
 
   } else if (resposta2 > resposta1 && resposta2 > resposta3) {
-    
+
     if (respostas.genero == "masculino") {
       devImg = caracterUserMasculino[1].img;
       devDesc = caracterUserMasculino[1].descricao;
@@ -119,7 +119,22 @@ export function obterRespostasConsole() {
   console.log(respostas);
   console.log("a resposta q1 é ", q1resposta)
 
-}
+
+  //adicionando um listenning ao botão
+  btnCadastrar.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    const valResposta = respostas
+
+    valResposta != ""
+      ? (
+        arrayResposta.push(valResposta),
+        localStorage.setItem("arrayReposta", JSON.stringify(arrayResposta)),
+        console.log("As seguintes informações foram salvas: " + valResposta)
+      )
+      : alert("Por favor, insira valores validos.");
+
+  });
 }
 
 
