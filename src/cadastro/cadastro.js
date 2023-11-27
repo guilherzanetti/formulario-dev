@@ -71,15 +71,19 @@ function obterRespostasConsole() {
   let resposta2 = 0;
   let resposta3 = 0;
 
-  // Verificação da quantidade da mesma resposta
-  if (q1resposta == "Opção 1") {
-    resposta1 = resposta1 + 1;
-  } else if (q2resposta == "Opção 2") {
-    resposta2 = resposta2 + 1;
-  } else {
-    resposta3 = resposta3 + 1;
+  const opcoes = [q1resposta, q2resposta, q3resposta, q4resposta, q5resposta];
 
+  for(i = 0; i < opcoes.length; i ++){ 
+    if (opcoes[i] == "Opção 1") {
+      resposta1 = resposta1 + 1;
+    } else if (q2resposta == "Opção 2") {
+      resposta2 = resposta2 + 1;
+    } else {
+      resposta3 = resposta3 + 1;
+    }
   }
+
+  // Verificação da quantidade da mesma resposta
 
   // Verificar tipo de dev
 
