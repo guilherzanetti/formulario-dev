@@ -120,7 +120,7 @@ export function obterRespostasConsole() {
   console.log("a resposta q1 é ", q1resposta)
 
 }
-
+}
 
 
 // Altere o evento associado ao botão "Cadastrar" para chamar a nova função
