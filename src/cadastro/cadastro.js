@@ -17,18 +17,14 @@ function selectLabel(label, perguntaIndex) {
 
 
 // Backend-Backend-Backend-Backend-Backend-Backend-Backend-Backend-Backend-Backend-Backend-Backend-Backend-
-
-
-
 //Variáveis
 const nome = document.getElementById("nome");
 const btnCadastrar = document.getElementById("btnCadastrar");
-const arrayNames = JSON.parse(localStorage.getItem("arrayNames")) || [];
-
-
-// CADASTRO
+const arrayResposta = JSON.parse(localStorage.getItem("arrayResposta")) || [];
 
 let devImg, devDesc, devCaracter;
+
+// CADASTRO
 
 // Adicione esta função ao seu arquivo cadastro.js
 function obterRespostasConsole() {

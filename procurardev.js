@@ -2,7 +2,7 @@
 const selectUser = document.getElementById ("selectUser")
 
 //pegando o array no local storage
-var arrayNames = JSON.parse(localStorage.getItem('arrayNames')) || [];
+var arrayResposta = JSON.parse(localStorage.getItem('arrayResposta')) || [];
 
 //func. de adicionar usuario as opções na pag.
 function adUser(user) {
@@ -18,9 +18,9 @@ function adUser(user) {
     selectUser.appendChild(option);
     
 }
-console.log(arrayNames);
+console.log(arrayResposta);
 
 //faz um loopin para verificar o indice no arrayNames do nome adicionado e chama a função de adicionar usuario
-for (var i = 0; i < arrayNames.length; i++) {
-    adUser(arrayNames[i]);
+for (var i = 0; i < arrayResposta.length; i++) {
+    adUser(arrayResposta[i]);
   }
