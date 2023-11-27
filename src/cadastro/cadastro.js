@@ -27,7 +27,7 @@ let devImg, devDesc, devCaracter;
 // CADASTRO
 
 // Adicione esta função ao seu arquivo cadastro.js
-function obterRespostasConsole() {
+export function obterRespostasConsole() {
   const nome = document.querySelector('#nome').value;
   const respostas = {
     nome: nome,
