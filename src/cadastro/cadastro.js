@@ -25,23 +25,6 @@ const nome = document.getElementById("nome");
 const btnCadastrar = document.getElementById("btnCadastrar");
 const arrayNames = JSON.parse(localStorage.getItem("arrayNames")) || [];
 
-//adicionando um listenning ao botão
-
-
-btnCadastrar.addEventListener("click", (e) => {
-  e.preventDefault();
-
-  const valNames = nome.value.trim();
-
-  valNames != ""
-    ? (
-      arrayNames.push(valNames),
-      localStorage.setItem("arrayNames", JSON.stringify(arrayNames)),
-      console.log("O Nome: " + valNames + " foi adicionado com sucesso!")
-    )
-    : alert("Por favor, insira um nome válido.");
-
-});
 
 // CADASTRO
 
@@ -136,6 +119,25 @@ function obterRespostasConsole() {
   console.log(resposta1, resposta2, resposta3);
   console.log(respostas);
   console.log("a resposta q1 é ", q1resposta)
+
+
+//adicionando um listenning ao botão
+  btnCadastrar.addEventListener("click", (e) => {
+    e.preventDefault();
+  
+    const valResposta = respostas
+  
+    valResposta != ""
+      ? (
+        arrayResposta.push(valResposta),
+        localStorage.setItem("arrayReposta", JSON.stringify(arrayResposta)),
+        console.log("As seguintes informações foram salvas: " + valResposta)
+      )
+      : alert("Por favor, insira valores validos.");
+  
+  });
+}
+
 }
 
 
