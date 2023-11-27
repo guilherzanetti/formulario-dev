@@ -7,6 +7,7 @@
     <title>Cadastrar Dev</title>
     <link rel="stylesheet" href="./cadastro.css">
     <link rel="stylesheet" href="/styleglobal.css">
+    <link rel="stylesheet" href="popup.css">
 </head>
 
 <body>
@@ -127,7 +128,47 @@
                 <button type="button" id="btnCadastrar" class="btnCadastrar">Cadastrar</button>
         </form>
     </div>
+    <!-- No seu arquivo HTML -->
+
+    <!-- POPUP PERFIL -->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close" onclick="fecharPopup()">&times;</span>
+            <img id="popup-img" src="" width="200px" alt="Imagem de Perfil">
+            <h2 id="popup-titulo">Título do Dev</h2>
+            <p id="popup-descricao">Descrição do Dev</p>
+        </div>
+    </div>
+
     <script src="./cadastro.js"></script>
+    <script>
+        //POPUP FUNCTION
+        // Função para abrir o popup
+        function mostrarPopup() {
+            const popup = document.getElementById('popup');
+            popup.style.display = 'block';
+
+            // Preencha as informações do Dev no popup
+            const poupImg = document.getElementById('popup-img');
+            const popupTitulo = document.getElementById('popup-titulo');
+            const popupDescricao = document.getElementById('popup-descricao');
+
+            // Aqui você pode definir as informações com base nas respostas do usuário
+        
+            poupImg.src = devImg;
+            popupTitulo.textContent = devCaracter;
+            popupDescricao.textContent = devDesc;
+        }
+
+        // Função para fechar o popup
+        function fecharPopup() {
+            const popup = document.getElementById('popup');
+            popup.style.display = 'none';
+        }
+
+        // Altere o evento associado ao botão "Cadastrar" para chamar a nova função
+        document.getElementById('btnCadastrar').addEventListener('click', mostrarPopup);
+    </script>
 </body>
 
 </html>
