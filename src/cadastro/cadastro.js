@@ -18,13 +18,12 @@ function selectLabel(label, perguntaIndex) {
 
 // Backend-Backend-Backend-Backend-Backend-Backend-Backend-Backend-Backend-Backend-Backend-Backend-Backend-
 //Variáveis
-const nome = document.getElementById("nome");
 const btnCadastrar = document.getElementById("btnCadastrar");
 const arrayResposta = JSON.parse(localStorage.getItem("arrayResposta")) || [];
 
+// CADASTRO
 let devImg, devDesc, devCaracter;
 
-// CADASTRO
 
 // Adicione esta função ao seu arquivo cadastro.js
 export function obterRespostasConsole() {
@@ -39,6 +38,22 @@ export function obterRespostasConsole() {
     q5: obterRespostaPergunta('q5'),
     // Adicione mais perguntas conforme necessário
   };
+
+      //adicionando um listenning ao botão
+      btnCadastrar.addEventListener("click", (e) => {
+        e.preventDefault();
+      
+        const valResposta = respostas
+      
+        valResposta != ""
+          ? (
+            arrayResposta.push(valResposta),
+            localStorage.setItem("arrayReposta", JSON.stringify(arrayResposta)),
+            console.log("As seguintes informações foram salvas: " + valResposta)
+          )
+          : alert("Por favor, insira valores validos.");
+      
+      });
 
   const q1resposta = respostas.q1
   const q2resposta = respostas.q2
@@ -60,7 +75,7 @@ export function obterRespostasConsole() {
         } else {
         resposta3 = resposta3 + 1;
         }
-    };
+    }
 
 
   if (resposta1 > resposta2 && resposta1 > resposta3) {
@@ -104,22 +119,6 @@ export function obterRespostasConsole() {
   console.log(respostas);
   console.log("a resposta q1 é ", q1resposta)
 
-
-    //adicionando um listenning ao botão
-  btnCadastrar.addEventListener("click", (e) => {
-    e.preventDefault();
-  
-    const valResposta = respostas
-  
-    valResposta != ""
-      ? (
-        arrayResposta.push(valResposta),
-        localStorage.setItem("arrayReposta", JSON.stringify(arrayResposta)),
-        console.log("As seguintes informações foram salvas: " + valResposta)
-      )
-      : alert("Por favor, insira valores validos.");
-  
-  });
 }
 
 
