@@ -27,3 +27,17 @@ function chamarFuncao() {
    // Chama a função com o valor selecionado como parâmetro
    obterRespostasConsole(selectedClient);
 };
+
+
+
+
+
+
+
+
+
+var deletItens = document.getElementById("deletItens")
+
+function deleteLocalStorage() {
+    localStorage.removeItem("arrayReposta")
+}
