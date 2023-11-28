@@ -15,3 +15,8 @@ if (client) {
     });
 };
 
+const btnProcurarDevs = document.getElementById("btnProcurarDevs");
+
+btnProcurarDevs.addEventListener("click", function name(params) {
+    client
+})

@@ -21,6 +21,24 @@ function selectLabel(label, perguntaIndex) {
 const btnCadastrar = document.getElementById("btnCadastrar");
 const arrayResposta = JSON.parse(localStorage.getItem("arrayResposta")) || [];
 
+  //adicionando um listenning ao botão
+  btnCadastrar.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    const respostas = obterRespostasConsole();
+      const valResposta = respostas
+      
+      valResposta != ""
+        ? (
+           arrayResposta.push(valResposta),
+            localStorage.setItem("arrayReposta", JSON.stringify(arrayResposta)),
+            console.log("As seguintes informações foram salvas: " + valResposta)
+          )
+          : alert("Por favor, insira valores validos.");
+     });
+
+
+
 // CADASTRO
 let devImg, devDesc, devCaracter;
 
@@ -163,20 +181,6 @@ const caracterUserFeminino = [
 
 
 
-  //adicionando um listenning ao botão
-  btnCadastrar.addEventListener("click", (e) => {
-    e.preventDefault();
 
-    const respostas = obterRespostasConsole();
-      const valResposta = respostas
-      
-      valResposta != ""
-        ? (
-           arrayResposta.push(valResposta),
-            localStorage.setItem("arrayReposta", JSON.stringify(arrayResposta)),
-            console.log("As seguintes informações foram salvas: " + valResposta)
-          )
-          : alert("Por favor, insira valores validos.");
-     });
 
      
