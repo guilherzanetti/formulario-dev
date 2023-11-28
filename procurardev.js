@@ -8,15 +8,19 @@ console.log(client[0].nome);
 if (client) {
     client.forEach(function (client) {
         const option = document.createElement("option");
-
+        
         option.text = client.nome
         option.value = client.nome
         selectUser.appendChild(option);
     });
 };
 
-const btnProcurarDevs = document.getElementById("btnProcurarDevs");
 
-btnProcurarDevs.addEventListener("click", function name(params) {
-    client
-})
+ // Define a função que será chamada quando o link for clicado
+ function chamarFuncao() {
+   // Obtém o valor selecionado do select
+   const selectedValue = selectUser.value;
+    console.log(selectedValue)
+   // Chama a função com o valor selecionado como parâmetro
+   obterRespostasConsole(selectedValue);
+ };
