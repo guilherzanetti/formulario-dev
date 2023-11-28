@@ -38,22 +38,9 @@ function obterRespostasConsole(pergunta) {
     q5: obterRespostaPergunta('q5'),
     // Adicione mais perguntas conforme necessário
   };
+  
 
-      //adicionando um listenning ao botão
-      btnCadastrar.addEventListener("click", (e) => {
-        e.preventDefault();
-      
-        const valResposta = respostas
-      
-        valResposta != ""
-          ? (
-            arrayResposta.push(valResposta),
-            localStorage.setItem("arrayReposta", JSON.stringify(arrayResposta)),
-            console.log("As seguintes informações foram salvas: " + valResposta)
-          )
-          : alert("Por favor, insira valores validos.");
-      
-      });
+
 
   const q1resposta = respostas.q1
   const q2resposta = respostas.q2
@@ -119,23 +106,8 @@ function obterRespostasConsole(pergunta) {
   console.log(respostas);
   console.log("a resposta q1 é ", q1resposta)
 
-
-  //adicionando um listenning ao botão
-  btnCadastrar.addEventListener("click", (e) => {
-    e.preventDefault();
-
-    const valResposta = respostas
-
-    valResposta != ""
-      ? (
-        arrayResposta.push(valResposta),
-        localStorage.setItem("arrayReposta", JSON.stringify(arrayResposta)),
-        console.log("As seguintes informações foram salvas: " + valResposta)
-      )
-      : alert("Por favor, insira valores validos.");
-
-  });
-}
+   return respostas;
+};
 
 
 // Altere o evento associado ao botão "Cadastrar" para chamar a nova função
@@ -191,3 +163,20 @@ const caracterUserFeminino = [
 
 
 
+  //adicionando um listenning ao botão
+  btnCadastrar.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    const respostas = obterRespostasConsole();
+      const valResposta = respostas
+      
+      valResposta != ""
+        ? (
+           arrayResposta.push(valResposta),
+            localStorage.setItem("arrayReposta", JSON.stringify(arrayResposta)),
+            console.log("As seguintes informações foram salvas: " + valResposta)
+          )
+          : alert("Por favor, insira valores validos.");
+     });
+
+     
