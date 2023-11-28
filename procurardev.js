@@ -16,11 +16,14 @@ if (client) {
 };
 
 
- // Define a função que será chamada quando o link for clicado
- function chamarFuncao() {
+// Define a função que será chamada quando o link for clicado
+function chamarFuncao() {
    // Obtém o valor selecionado do select
    const selectedValue = selectUser.value;
-    console.log(selectedValue)
+    console.log(selectedValue);
+
+    // Encontra o objeto correspondente no arrayResposta com base no nome
+    const selectedClient = client.find(client => client.nome === selectedValue)
    // Chama a função com o valor selecionado como parâmetro
-   obterRespostasConsole(selectedValue);
- };
+   obterRespostasConsole(selectedClient);
+};
