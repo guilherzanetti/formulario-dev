@@ -119,7 +119,6 @@ function obterRespostasConsole(pergunta) {
     }
   }
   console.log("Você é um dev:", devCaracter, devDesc);
-  alert("Você é um dev: ", devCaracter, ". Sua descrição é: ", devDesc);
   console.log(resposta1, resposta2, resposta3);
   console.log(respostas);
   console.log("a resposta q1 é ", q1resposta)
