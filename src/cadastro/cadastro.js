@@ -43,7 +43,7 @@ const arrayResposta = JSON.parse(localStorage.getItem("arrayResposta")) || [];
 let devImg, devDesc, devCaracter;
 
 
-// Adicione esta função ao seu arquivo cadastro.js
+// 
 function obterRespostasConsole(pergunta) {
   const nome = document.querySelector('#nome').value;
   const respostas = {
@@ -54,7 +54,6 @@ function obterRespostasConsole(pergunta) {
     q3: obterRespostaPergunta('q3'),
     q4: obterRespostaPergunta('q4'),
     q5: obterRespostaPergunta('q5'),
-    // Adicione mais perguntas conforme necessário
   };
   
 
@@ -127,10 +126,10 @@ function obterRespostasConsole(pergunta) {
 };
 
 
-// Altere o evento associado ao botão "Cadastrar" para chamar a nova função
+// 
 document.getElementById("btnCadastrar").addEventListener("click", obterRespostasConsole);
 
-// Mantenha a função obterRespostaPergunta no seu arquivo cadastro.js
+// 
 function obterRespostaPergunta(nomePergunta) {
   const opcoes = document.querySelectorAll(`input[name="${nomePergunta}"]:checked`);
 
